@@ -1,0 +1,27 @@
+@use "global";
+@use "variables";
+
+body {
+  background: radial-gradient(circle farthest-side, #fceabb, #f8b500);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 48px;
+  color: gray;
+
+  div {
+    padding: 24px 0;
+    gap: 22px;
+  }
+}
+
+article {
+  margin: 0;
+  padding: 0;
+}
