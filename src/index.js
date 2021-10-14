@@ -1,8 +1,17 @@
+import './css/style.scss';
+
 const elvenShieldRecipe = {
     leatherStrips: 2,
     ironIngot: 1,
     refinedMoonstone: 4,
 };
 
-console.log(elvenShieldRecipe);
-console.log('111111111111111');
+const elvenGauntletsRecipe = {
+    ...elvenShieldRecipe,
+    leather: 1,
+    refinedMoonstone: 4,
+};
+
+console.log('elvenShieldRecipe: ', elvenShieldRecipe);
+console.log('elvenGauntletsRecipe: ', elvenGauntletsRecipe);
+    
