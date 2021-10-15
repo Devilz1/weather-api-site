@@ -13,7 +13,19 @@ module.exports = {
         rules: [
             {
                 test: /\.s?css$/i,
-                use: [isProd ? MiniCssExtractPlugin.loader : "style-loader", "css-loader", "postcss-loader", "sass-loader"],
+                use: [
+                    isProd ? MiniCssExtractPlugin.loader : "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: {
+                                localIdentName: "[folder]__[local]__[hash:base64:5]",
+                            },
+                        },
+                    },
+                    "postcss-loader",
+                    "sass-loader"
+                ],
             },
             {
                 test: /\.js$/,
