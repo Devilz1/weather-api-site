@@ -2,7 +2,7 @@
 @use "variables";
 
 body {
-  background: radial-gradient(circle farthest-side, #fceabb, #f8b500);
+  background: var(--color-lochmara);
   display: flex;
   flex-direction: column;
 }
@@ -13,15 +13,9 @@ main {
   flex-direction: column;
   justify-content: center;
   font-size: 48px;
-  color: gray;
+  color: #000;
 
   div {
     padding: 24px 0;
-    gap: 22px;
   }
-}
-
-article {
-  margin: 0;
-  padding: 0;
 }
