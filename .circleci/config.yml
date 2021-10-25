@@ -22,4 +22,4 @@ jobs:
             - ./node_modules
       - run: # run tests
           name: Run Test and Coverage
-          command: npm run finish
+          command: npm test -- --coverage
