@@ -1,11 +1,9 @@
 jobs:
   build:
     docker:
-      - image: circleci/node:6
+      - image: circleci/node:14.18.1
     steps:
-      - checkout:
-          post:
-            - cp config/blah.foo.yml config/foo.yml
+      - checkout
       - restore_cache: # special step to restore the dependency cache
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
