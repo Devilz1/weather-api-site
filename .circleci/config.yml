@@ -23,4 +23,4 @@ jobs:
           command: npm test
       - run:
           name: Generate coverage report
-          command: npm jest -- --coverage
+          command: npm test -- --coverage
