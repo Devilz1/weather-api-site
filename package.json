@@ -5,7 +5,7 @@
     "watch": "webpack --watch",
     "build": "cross-env NODE_ENV=production webpack",
     "build-dev": "webpack",
-    "test": "jest -- --coverage",
+    "test": "jest --coverage",
     "eslint": "eslint src/ --cache --color --ext .tsx,.ts,.jsx,.js",
     "finish": "yarn eslint && yarn test",
     "clean": "rm -rf dist"
