@@ -6,7 +6,7 @@
     "build": "cross-env NODE_ENV=production webpack",
     "build-dev": "webpack",
     "test": "jest",
-    "eslint": "eslint src/ --cache --color --ext .tsx,.ts,.jsx,.js",
+    "eslint": "eslint --cache --color --ext .tsx,.ts,.jsx,.js",
     "finish": "yarn eslint && yarn test",
     "clean": "rm -rf dist"
   },

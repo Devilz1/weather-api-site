@@ -26,8 +26,8 @@
   "overrides": [
     {
       "files": [
+        "src/**/*.js",
         "*.test.js", "*.test.jsx", "*.snap.js", "*.snap.jsx", "*.integ.jsx",
-        "*.test.ts", "*.test.tsx", "*.snap.ts", "*.snap.tsx", "*.integ.tsx"
       ],
       "rules": {
         "max-lines": "off",

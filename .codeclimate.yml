@@ -1,4 +1,4 @@
-version: "2"         # required to adjust maintainability checks
+version: "2"
 plugins:
   eslint:
     enabled: true
@@ -6,3 +6,4 @@ plugins:
     config:
       extensions:
         - .js
+      overrides: ["src/**/*.js"]
