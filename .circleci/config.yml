@@ -20,6 +20,9 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
-      - run: # run tests
-          name: Run Test and Coverage
-          command: npm test -- --coverage
+      - run:
+          name: Run tests
+          command: npm test
+      - run:
+          name: Generate coverage report
+          command: npm run cover
