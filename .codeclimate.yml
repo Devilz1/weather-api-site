@@ -7,5 +7,5 @@ plugins:
       extensions:
         - .js
     exclude_patterns:
-      - "./"
-      - "!./src"
+      - ""
+      - ""
