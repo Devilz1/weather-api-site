@@ -6,4 +6,6 @@ plugins:
     config:
       extensions:
         - .js
-      overrides: ["src/**/*.js"]
+    exclude_patterns:
+      - "./"
+      - "!./src"
