@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render component should correct render 1`] = `
+<div>
+  <h1>
+    SITE SITE WWWWW
+  </h1>
+  <main>
+    <div
+      className="zvaal"
+    >
+      1
+    </div>
+    <div
+      className="wow"
+    >
+      2
+    </div>
+    <div
+      className="elf"
+    >
+      <img
+        alt="Elf"
+        src="test-file-stub"
+      />
+    </div>
+  </main>
+</div>
+`;

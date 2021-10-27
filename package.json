@@ -5,29 +5,111 @@
     "watch": "webpack --watch",
     "build": "cross-env NODE_ENV=production webpack",
     "build-dev": "webpack",
-    "eslint": "eslint"
+    "test": "jest",
+    "eslint": "eslint --cache --color --ext .tsx,.ts,.jsx,.js",
+    "finish": "yarn eslint && yarn test",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/preset-env": "^7.15.6",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
     "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.2",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.3.0",
+    "eslint-plugin-react": "^7.26.1",
+    "html-webpack-plugin": "^5.4.0",
+    "jest": "^27.3.1",
+    "jest-dom": "^4.0.0",
+    "jest-environment-jsdom": "^27.3.1",
+    "jest-environment-jsdom-global": "^3.0.0",
     "mini-css-extract-plugin": "^2.3.0",
     "postcss": "^8.3.9",
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
+    "react-refresh": "^0.10.0",
     "sass": "^1.42.1",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.3.0",
+    "typescript": "^4.4.4",
     "webpack": "^5.53.0",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.2.1"
   },
   "dependencies": {
+    "@babel/eslint-parser": "^7.15.8",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.3",
+    "@types/react": "^17.0.31",
+    "@types/react-dom": "^17.0.10",
+    "@types/react-test-renderer": "^17.0.1",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsdoc": "^37.0.0",
+    "eslint-plugin-jsx": "^0.1.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-restricted-globals": "^0.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "prettier": "^2.4.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-test-renderer": "^17.0.2",
+    "ts-jest": "^27.0.7"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "statements": 92,
+        "branches": 88,
+        "lines": 93,
+        "functions": 87
+      }
+    },
+    "verbose": true,
+    "rootDir": "./",
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testMatch": [
+      "**/?(*.)(snap|test|integ).(ts|js)?(x)"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/__ui__/",
+      "<rootDir>/server/"
+    ],
+    "globals": {
+      "NODE_ENV": "test"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "/",
+      "./src",
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less|scss)$": "identity-obj-proxy",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)$": "<rootDir>/fileMock.ts"
+    },
+    "testEnvironment": "jest-environment-jsdom-global",
+    "prettierPath": "./node_modules/prettier",
+    "setupFilesAfterEnv": [
+      "./rtl.setup.ts"
+    ]
   }
 }
