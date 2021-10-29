@@ -14,14 +14,15 @@ if (isProd) {
 module.exports = {
     mode,
     target,
+    entry: ['@babel/polyfill', './src'],
     output: {
         assetModuleFilename: 'images/[hash][ext][query]',
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss'],
         alias: {
-            css: path.resolve(__dirname, './src/css'),
             img: path.resolve(__dirname, './src/img'),
+            pages: path.resolve(__dirname, './src/pages'),
         },
     },
     plugins: [
@@ -58,7 +59,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.js$/,
+                test: /\.(js|jsx|tsx|ts)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',

@@ -1,6 +1,17 @@
 {
-  "extends": ["prettier"],
+  "env": {
+    "browser": true,
+    "amd": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "rules": {
+    "@typescript-eslint/no-var-requires": 0,
     "prettier/prettier": "error",
     "comma-dangle": 0,
     "no-trailing-spaces": "off",
@@ -11,23 +22,51 @@
     "jsx-a11y/no-static-element-interactions": 0,
     "jsx-a11y/click-events-have-key-events": 0,
     "jsx-a11y/anchor-is-valid": 0,
-    "react/sort-comp": [0, {
-      "order": [
-        "lifecycle"
-      ]
-    }],
+    "react/sort-comp": [
+      0,
+      {
+        "order": [
+          "lifecycle"
+        ]
+      }
+    ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "max-nested-callbacks": [
       "error",
       4
+    ],
+    "no-useless-rename": [
+      "error",
+      {
+        "ignoreDestructuring": true,
+        "ignoreImport": true,
+        "ignoreExport": false
+      }
+    ],
+    "no-duplicate-imports": "error",
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
     ]
   },
   "overrides": [
     {
       "files": [
+        "./**/*.js",
         "src/**/*.js",
-        "*.test.js", "*.test.jsx", "*.snap.js", "*.snap.jsx", "*.integ.jsx",
+        "*.test.js",
+        "*.test.jsx",
+        "*.snap.js",
+        "*.snap.jsx",
+        "*.integ.jsx"
       ],
       "rules": {
         "max-lines": "off",
@@ -36,5 +75,10 @@
     }
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react-hooks", "prettier", "jsx-a11y"]
+  "plugins": [
+    "react-hooks",
+    "prettier",
+    "jsx-a11y",
+    "unused-imports"
+  ]
 }
