@@ -26,7 +26,7 @@ module.exports = {
         },
     },
     plugins: [
-        new MiniCssExtractPlugin(),
+        isProd ? MiniCssExtractPlugin.loader : 'style-loader',
         new HtmlWebpackPlugin({
             template: './src/app.html',
         }),
