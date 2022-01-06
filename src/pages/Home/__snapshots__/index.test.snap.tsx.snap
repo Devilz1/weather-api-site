@@ -7,7 +7,7 @@ exports[`Home should render 1`] = `
   <h1
     className="title"
   >
-    FrontStand
+    FrontStand My site
   </h1>
   <button
     onClick={[Function]}

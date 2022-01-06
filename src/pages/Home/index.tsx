@@ -6,7 +6,7 @@ import {setTitleAction} from './actions';
 
 export const Home = ({setTitle}: any) => (
     <div className={s.wrapper}>
-        <h1 className={s.title}>FrontStan My site</h1>
+        <h1 className={s.title}>FrontStand My site</h1>
         <button onClick={() => setTitle()}>Click for change title</button>
     </div>
 );
