@@ -18,17 +18,18 @@ jobs:
         with:
           node-version: 14.x
       - name: install node_modules
-          run: yarn
+        run: yarn
       - name: eslint
-          run: yarn eslint
+        run: yarn eslint
 
   tests:
+    runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v2.3.4
-      - uses: actions/setup-node@v1.4.4
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
         with:
           node-version: 14.x
       - name: install node_modules
         run: yarn
-      - name: Run tests
-        uses: yarn test
+      - name: eslint
+        run: yarn test
