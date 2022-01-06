@@ -1,0 +1,49 @@
+@import "../../../css/style";
+
+:local {
+  .wrapper {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+
+    @media (--sm-viewport) {
+      justify-content: center;
+    }
+
+    &:hover .title {
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  .title {
+    font-size: 94px;
+    margin-left: 3em;
+    position: relative;
+    user-select: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 220px;
+      border: 2px solid red;
+      transition: .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+      @media (--md-viewport) {
+        width: 155px;
+      }
+    }
+
+    @media (--md-viewport) {
+      margin-left: 1em;
+      font-size: 68px;
+    }
+
+    @media (--sm-viewport) {
+      margin: 0;
+    }
+  }
+}
