@@ -1,5 +1,6 @@
 const initialState = {
-    title: '',
+    titleHeader: '',
+    titleFooter: '',
     description: '',
 };
 
@@ -8,7 +9,13 @@ export const homeReducer = (state = initialState, action: any) => {
         case 'SET_TITLE':
             return {
                 ...state,
-                title: 'Wow check',
+                titleHeader: 'Wow check',
+                titleFooter: 'The End',
+            };
+        case 'SET_DESCRIPTION':
+            return {
+                ...state,
+                description: 'Description',
             };
         default:
             return state;
