@@ -13,7 +13,6 @@ const plugins = [
     new HtmlWebpackPlugin({
         template: './src/app.html',
     }),
-    new ReactRefreshWebpackPlugin(),
 ];
 
 const styleLoader = [
@@ -35,6 +34,7 @@ if (isProd) {
     plugins.push(new MiniCssExtractPlugin());
     styleLoader.unshift(MiniCssExtractPlugin.loader);
 } else {
+    plugins.push(new ReactRefreshWebpackPlugin());
     styleLoader.unshift('style-loader');
 }
 

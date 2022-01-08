@@ -8,7 +8,8 @@
     "test": "jest",
     "eslint": "eslint ./src --cache --color --ext .tsx,.ts,.jsx,.js",
     "eslint-fix": "eslint --cache --color --ext .tsx,.ts,.jsx,.js,.scss,.css --fix",
-    "finish": "yarn eslint && jest --coverage"
+    "finish": "yarn eslint && jest --coverage",
+    "deploy": "cd dist && rsync --archive --compress --delete . u1506694@37.140.192.76:/var/www/u1506694/data/www/fronstand.ru/"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -51,6 +52,7 @@
     "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.15.6",
     "@babel/polyfill": "^7.12.1",
+    "@fontsource/manjari": "^4.5.0",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.6",
     "@types/react": "^17.0.33",

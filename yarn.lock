@@ -1065,6 +1065,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/manjari@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/manjari/-/manjari-4.5.0.tgz#3c209c72e09b94364e680b7fe3703991becedae2"
+  integrity sha512-8oisDg6oOCB5vDfmWBCBw9PZ7NnimfKVZeCiDoL7imTE3Zp5EPXxJBP/svM9QEYRj/l4fX2Fd+sACLx+qvPmkw==
+
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.5.0.tgz#1407967d4c6eecd7388f83acf1eaf4d0c6e58ef9"
