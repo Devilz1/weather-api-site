@@ -22,6 +22,7 @@ jobs:
       - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
       - run: chmod 600 "$HOME/.ssh/key"
       #Build
+      - run: yarn
       - run: npm run build
       #Deploy
       - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . u1506694@37.140.192.76:/var/www/u1506694/data/www/fronstand.ru/
