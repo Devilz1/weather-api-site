@@ -1,0 +1,28 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      #Setup key
+      - run: set -eu
+      - run: mkdir "$Home/.ssh"
+      - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
+      - run: chmod 600 "$HOME/.ssh/key"
+      #Build
+      - run: npm ci
+      - run: npm run build
+      #Deploy
+      - run: cd dist && rsync -e "ssh -i $HOME/.ss/key -o StrictHostKeyChecking=no" --archive --compress --delete . u1506694@37.140.192.76:/var/www/u1506694/data/www/fronstand.ru/

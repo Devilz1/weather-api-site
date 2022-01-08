@@ -2,13 +2,27 @@ import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 
 import {HomeConnected} from 'pages/Home';
+import {Header} from 'components/header';
+import {Footer} from 'components/footer';
 
-const RouterComponent = () => (
-    <BrowserRouter>
-        <Route path="/">
-            <HomeConnected />
-        </Route>
-    </BrowserRouter>
+import s from './style.scss';
+import {connect} from 'react-redux';
+
+const RouterComponent = ({titleHeader, titleFooter}: {[key: string]: string}) => (
+    <div className={s.container}>
+        <Header titleHeader={titleHeader} />
+        <div className={s.body}>
+            <BrowserRouter>
+                <Route path="/">
+                    <HomeConnected />
+                </Route>
+            </BrowserRouter>
+        </div>
+        <Footer titleFooter={titleFooter} />
+    </div>
 );
 
-export default RouterComponent;
+export default connect((store: any) => ({
+    titleHeader: store.home.titleHeader,
+    titleFooter: store.home.titleFooter,
+}))(RouterComponent);

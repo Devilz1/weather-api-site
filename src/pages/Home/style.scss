@@ -1,8 +1,10 @@
-@import "../../../css/style";
+@import "css/style";
 
 :local {
   .wrapper {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     cursor: pointer;
 
@@ -15,11 +17,26 @@
         width: 100%;
       }
     }
+
+    button {
+      width: auto;
+      padding: 20px 18px;
+      margin-bottom: 5px;
+      border-radius: 6px;
+      color: #fff;
+      background: #ff6834ff;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        color: #ff6834ff;
+        background: #fff;
+      }
+    }
   }
 
   .title {
     font-size: 94px;
-    margin-left: 3em;
     position: relative;
     user-select: none;
 

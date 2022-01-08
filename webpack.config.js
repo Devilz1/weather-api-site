@@ -13,7 +13,6 @@ const plugins = [
     new HtmlWebpackPlugin({
         template: './src/app.html',
     }),
-    new ReactRefreshWebpackPlugin(),
 ];
 
 const styleLoader = [
@@ -35,6 +34,7 @@ if (isProd) {
     plugins.push(new MiniCssExtractPlugin());
     styleLoader.unshift(MiniCssExtractPlugin.loader);
 } else {
+    plugins.push(new ReactRefreshWebpackPlugin());
     styleLoader.unshift('style-loader');
 }
 
@@ -52,6 +52,9 @@ module.exports = {
         alias: {
             img: path.resolve(__dirname, './src/img'),
             pages: path.resolve(__dirname, './src/pages'),
+            components: path.resolve(__dirname, './src/components'),
+            containers: path.resolve(__dirname, './src/containers'),
+            css: path.resolve(__dirname, './css'),
         },
     },
     plugins,
