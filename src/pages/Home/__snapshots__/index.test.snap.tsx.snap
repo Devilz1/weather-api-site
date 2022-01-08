@@ -14,5 +14,16 @@ exports[`Home should render 1`] = `
   >
     Click for change title
   </button>
+  <button
+    onClick={[Function]}
+  >
+    Click for change 
+    <u>
+      description
+    </u>
+  </button>
+  <h3>
+    Not description text
+  </h3>
 </div>
 `;
