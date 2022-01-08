@@ -25,4 +25,4 @@ jobs:
       - run: yarn
       - run: npm run build
       #Deploy
-      - run: cd dist && sshpass -p "h97x96p1HhZL1vAl" rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . u1506694@37.140.192.76:/var/www/u1506694/data/www/fronstand.ru/
+      - run: cd dist && sshpass -p "h97x96p1HhZL1vAl" rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . u1506694@37.140.192.76:/var/www/u1506694/data/www/nico-front.ru/
