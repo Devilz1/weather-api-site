@@ -2,7 +2,7 @@
 
 exports[`Home should render 1`] = `
 <div
-  className="wrapper"
+  className="wrapper undefined"
 >
   <h1
     className="title"
@@ -22,6 +22,35 @@ exports[`Home should render 1`] = `
       description
     </u>
   </button>
+  <div
+    className="buttonsColor"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Click for change background on red
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Click for change background on green
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Click for change background on yellow
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Click for change background on braun
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Click for change background on pink
+    </button>
+  </div>
   <h3>
     Not description text
   </h3>
