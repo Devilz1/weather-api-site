@@ -21,6 +21,10 @@
     background: #fd9aa7;
   }
 
+  .primary {
+    background: var(--color-lochmara);
+  }
+
   .wrapper {
     display: flex;
     flex-direction: column;
