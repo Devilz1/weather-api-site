@@ -6,5 +6,5 @@ module.exports = {
         ['@babel/preset-react', {runtime: 'automatic'}],
         '@babel/preset-typescript',
     ],
-    plugins: [[!isProd && require.resolve('react-refresh/babel')].filter(Boolean)],
+    plugins: [!isProd && require.resolve('react-refresh/babel')].filter(Boolean),
 };
