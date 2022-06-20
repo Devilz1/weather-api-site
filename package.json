@@ -1,5 +1,5 @@
 {
-  "name": "wow-api-site",
+  "name": "weather-api-site",
   "scripts": {
     "start": "webpack serve",
     "watch": "webpack --watch",
@@ -9,7 +9,7 @@
     "eslint": "eslint ./src --cache --color --ext .tsx,.ts,.jsx,.js",
     "eslint-fix": "eslint --cache --color --ext .tsx,.ts,.jsx,.js,.scss,.css --fix",
     "finish": "yarn eslint && jest --coverage",
-    "deploy": "cd dist && rsync --archive --compress --delete . u1506694@37.140.192.76:/var/www/u1506694/data/www/fronstand.ru/"
+    "deploy": "cd dist && sshpass -p 82wDST4QNy2Er3l3 rsync -e \"ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no\" --archive --compress --delete . u1713596@31.31.196.138:/var/www/u1713596/data/www/nico-front.ru/"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",

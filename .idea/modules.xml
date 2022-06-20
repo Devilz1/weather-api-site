@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/wow-api-site.iml" filepath="$PROJECT_DIR$/.idea/wow-api-site.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/weather-api-site.iml" filepath="$PROJECT_DIR$/.idea/weather-api-site.iml" />
     </modules>
   </component>
 </project>
