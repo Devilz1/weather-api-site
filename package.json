@@ -8,8 +8,7 @@
     "test": "jest",
     "eslint": "eslint ./src --cache --color --ext .tsx,.ts,.jsx,.js",
     "eslint-fix": "eslint --cache --color --ext .tsx,.ts,.jsx,.js,.scss,.css --fix",
-    "finish": "yarn eslint && jest --coverage",
-    "deploy": "cd dist && sshpass -p 82wDST4QNy2Er3l3 rsync -e \"ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no\" --archive --compress --delete . u1713596@31.31.196.138:/var/www/u1713596/data/www/nico-front.ru/"
+    "finish": "yarn eslint && jest --coverage"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -26,8 +25,12 @@
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.3.0",
-    "eslint-plugin-react": "^7.26.1",
-    "eslint-plugin-unused-imports": "^1.1.5",
+    "eslint": "^7.8.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-eslint-plugin": "^2.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.0.0",
     "html-webpack-plugin": "^5.4.0",
     "jest": "^27.3.1",
     "jest-dom": "^4.0.0",
@@ -67,7 +70,6 @@
     "core-js": "^3.19.0",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jsdoc": "^37.0.0",
     "eslint-plugin-jsx": "^0.1.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",

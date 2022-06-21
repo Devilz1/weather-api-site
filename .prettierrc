@@ -6,11 +6,15 @@
     "printWidth": 100,
     "trailingComma": "all",
     "overrides": [
-    {
-        "files": ["*.ts", "*.tsx"],
-        "options": {
-            "parser": "typescript"
+        {
+            "files": ["*.ts", "*.tsx"],
+            "options": {
+                "parser": "typescript"
+            }
         }
-    }
-]
+    ],
+    "extends": [
+        "some-other-config-you-use",
+        "prettier"
+    ]
 }

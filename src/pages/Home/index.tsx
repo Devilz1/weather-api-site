@@ -1,9 +1,9 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import classnames from 'classnames';
+import {connect} from 'react-redux';
 
-import s from './style.scss';
 import {setColorAction, setDescriptionAction, setTitleAction} from './actions';
+import s from './style.scss';
 
 export const Home = ({setTitle, setDescription, description, color, setColor}: any) => (
     <div className={classnames(s.wrapper, s[color])}>
