@@ -19,6 +19,30 @@ jobs:
       - name: eslint
         run: yarn eslint
 
+  tslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: install node_modules
+        run: yarn
+      - name: ts-lint
+        run: yarn typecheck
+
+  stylelint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: install node_modules
+        run: yarn
+      - name: stylelint
+        run: yarn stylelint
+
   tests:
     runs-on: ubuntu-latest
     steps:

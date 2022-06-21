@@ -16,12 +16,12 @@ declare module '*.png' {
 }
 
 declare module '*.svg' {
-    const content: any;
+    const content: never;
     export default content;
 }
 
 declare module '*.gif' {
-    const content: any;
+    const content: never;
     export default content;
 }
 
