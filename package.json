@@ -10,7 +10,7 @@
     "eslint": "eslint ./src --cache --color --ext .tsx,.ts,.jsx,.js",
     "eslint-fix": "yarn eslint --fix",
     "stylelint": "stylelint ./**.scss",
-    "finish": "yarn eslint && yarn stylelint && yarn tslint && jest --coverage"
+    "finish": "yarn eslint && yarn stylelint && yarn typecheck && jest --coverage"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
