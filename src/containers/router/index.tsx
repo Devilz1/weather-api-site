@@ -1,12 +1,11 @@
 import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
-
 import {HomeConnected} from 'pages/Home';
 import {Header} from 'components/header';
 import {Footer} from 'components/footer';
+import {connect} from 'react-redux';
 
 import s from './style.scss';
-import {connect} from 'react-redux';
 
 const RouterComponent = ({titleHeader, titleFooter}: {[key: string]: string}) => (
     <div className={s.container}>

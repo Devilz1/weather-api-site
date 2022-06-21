@@ -52,23 +52,6 @@
       }
     ]
   },
-  "overrides": [
-    {
-      "files": [
-        "./**/*.js",
-        "src/**/*.js",
-        "*.test.js",
-        "*.test.jsx",
-        "*.snap.js",
-        "*.snap.jsx",
-        "*.integ.jsx"
-      ],
-      "rules": {
-        "max-lines": "off",
-        "max-statements": "off"
-      }
-    }
-  ],
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {

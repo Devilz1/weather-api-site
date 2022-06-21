@@ -6,9 +6,11 @@
     "build": "cross-env NODE_ENV=production webpack",
     "build-dev": "webpack",
     "test": "jest",
-    "eslint": "eslint ./src --cache --color --ext .tsx,.ts,.jsx,.js",
-    "eslint-fix": "eslint --cache --color --ext .tsx,.ts,.jsx,.js,.scss,.css --fix",
-    "finish": "yarn eslint && jest --coverage"
+    "tslint": "yarn tsc --project ./tsconfig.json --noEmit",
+    "eslint": "eslint ./ --cache --color --ext .tsx,.ts,.jsx,.js",
+    "eslint-fix": "yarn eslint --fix",
+    "stylelint": "stylelint ./**.scss",
+    "finish": "yarn eslint && yarn stylelint && yarn tslint && jest --coverage"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -45,6 +47,9 @@
     "sass": "^1.42.1",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.3.0",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard-scss": "^4.0.0",
     "typescript": "^4.4.4",
     "webpack": "^5.53.0",
     "webpack-cli": "^4.8.0",
@@ -78,6 +83,7 @@
     "eslint-restricted-globals": "^0.2.0",
     "identity-obj-proxy": "^3.0.0",
     "kuker-emitters": "^6.7.4",
+    "postcss-scss": "^4.0.4",
     "prettier": "^2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
