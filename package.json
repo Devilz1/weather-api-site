@@ -6,8 +6,8 @@
     "build": "cross-env NODE_ENV=production webpack",
     "build-dev": "webpack",
     "test": "jest",
-    "tslint": "yarn tsc --project ./tsconfig.json --noEmit",
-    "eslint": "eslint ./ --cache --color --ext .tsx,.ts,.jsx,.js",
+    "typecheck": "yarn tsc --project ./tsconfig.json --noEmit",
+    "eslint": "eslint ./src --cache --color --ext .tsx,.ts,.jsx,.js",
     "eslint-fix": "yarn eslint --fix",
     "stylelint": "stylelint ./**.scss",
     "finish": "yarn eslint && yarn stylelint && yarn tslint && jest --coverage"

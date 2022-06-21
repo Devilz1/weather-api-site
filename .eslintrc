@@ -52,14 +52,6 @@
       }
     ]
   },
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "js": false
-    },
-    "project": ["./tsconfig.json"],
-    "createDefaultProgram": true
-  },
   "plugins": [
     "eslint-plugin",
     "@typescript-eslint",
